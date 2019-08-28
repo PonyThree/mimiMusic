@@ -1,0 +1,71 @@
+/* pages/musicIndex/musicIndex.wxss */
+.musicIndex{
+  width: 100%;
+}
+/* 搜索栏 */
+.searchBar{
+  position: fixed;
+  top:0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100rpx;
+  box-sizing: border-box;
+  padding-left:20rpx;
+  padding-right:10rpx;
+  line-height: 100rpx;
+  margin: 0 auto;
+  background-color: #f2f2f2;
+}
+.search{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 300rpx;
+  height: 60rpx;
+  border-radius: 30rpx;
+  padding-left: 30rpx;
+  background-color: #ffffff;
+}
+.search text{
+  font-size: 24rpx;
+  line-height: 60rpx;
+  color: #dddddd;
+  margin-left:30rpx;
+}
+/* banner */
+.mBanner{
+    position: relative;
+    width: 94%;
+    margin:0 auto;
+    border-radius: 20rpx;
+    overflow: hidden;
+}
+.bannerItem{
+  position: relative;
+}
+.slide-image{
+  width: 100%;
+}
+/* banner标志 */
+.mark{
+    position: absolute;
+    width: 156rpx;
+    height: 60rpx;
+    line-height: 60rpx;
+    font-size: 24rpx;
+    color: #ffffff;
+    border-radius: 20rpx 0;
+    bottom: 0rpx;
+    right: 0rpx;
+    text-align: center;
+}
+/* 五宫格 */
+.fiveGrid{
+  width: 94%;
+  margin: 20rpx auto 0;
+  background-color: #faf;
+  height: 120rpx;
+}

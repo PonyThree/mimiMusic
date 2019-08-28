@@ -1,0 +1,45 @@
+<!--pages/musicIndex/musicIndex.wxml-->
+<view class="page musicIndex">
+    <view style="height:100rpx;"></view>
+    <!-- 搜索栏 -->
+    <view class="searchBar">
+      <text>{{indexTitle}}</text>
+      <!-- 搜索 -->
+      <view class="search" catchtap="handleSearch">
+        <van-icon type="search" color="#f0f0f0;" size="24px"/>
+        <text>搜索</text>
+      </view>
+      <!-- 音乐识别图标 -->
+      <image src="../images/listen.png" style="width:50rpx;height:50rpx;padding:10rpx;" catchtap="identifySong"></image>
+    </view>
+    <!-- 城banner -->
+    <view class="mBanner">
+        <swiper style='height:{{myHeight}}px' indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" circular='true' previous-margin="0rpx" next-margin="0rpx" indicator-color="#ccc" indicator-active-color="#f00">
+            <block wx:for="{{banners}}" wx:key="index" class="bannerItem">
+
+                <swiper-item>
+                    <image src="{{item.pic}}" class="slide-image" bindload='imgheight' style="height:{{myHeight}}px" />       
+                    <!-- 标志 -->
+                    <view class="mark" style="background-color:{{item.titleColor}}">
+                        <text>{{item.typeTitle}}</text>
+                    </view>     
+                </swiper-item>
+            </block>
+        </swiper>
+        
+    </view>
+    <!-- 五宫格 -->
+    <view class="fiveGrid">
+      <scroll-view scroll-x class="scrollBox">
+        <view class="grid">
+          <!-- 图标 -->
+          <view class="gLogo">
+            <image src=""></image>
+          </view>
+          <text>每日推荐</text>
+        </view>
+      
+      </scroll-view>
+    </view>
+
+</view>

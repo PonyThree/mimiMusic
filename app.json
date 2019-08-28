@@ -1,0 +1,14 @@
+{
+  "pages":[
+    "pages/musicIndex/musicIndex",
+    "pages/index/index",
+    "pages/search/search",
+    "pages/identifySong/identifySong"
+  ],
+  "window":{
+    "backgroundTextStyle":"dark",
+    "navigationBarBackgroundColor": "#aaf",
+    "navigationBarTitleText": "音乐之城",
+    "navigationBarTextStyle":"white"
+  }
+}
