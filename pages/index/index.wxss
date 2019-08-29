@@ -1,4 +1,7 @@
 /**index.wxss**/
+.container{
+  position: relative;
+}
 .userinfo {
   display: flex;
   flex-direction: column;
@@ -22,4 +25,16 @@
   border-radius: 8rpx;
   color: #f66;
   border: 2px solid #aaaaff;
+}
+.threeLine{
+  position: absolute;
+  width: 60rpx;
+  height: 60rpx;
+  left: 10rpx;
+  top: 10rpx;
+
+}
+.threeLine image{
+  width: 60rpx;
+  height:60rpx;
 }

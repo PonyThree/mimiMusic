@@ -1,14 +1,47 @@
 {
-  "pages":[
-    "pages/musicIndex/musicIndex",
+  "pages": [
     "pages/index/index",
+    "pages/musicIndex/musicIndex",
     "pages/search/search",
-    "pages/identifySong/identifySong"
+    "pages/identifySong/identifySong",
+    "pages/discovery/discovery",
+    "pages/shipin/shipin"
   ],
-  "window":{
-    "backgroundTextStyle":"dark",
+  "window": {
+    "backgroundTextStyle": "dark",
     "navigationBarBackgroundColor": "#aaf",
     "navigationBarTitleText": "音乐之城",
-    "navigationBarTextStyle":"white"
-  }
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color":"#4a90e2",
+    "selectedColor": "#ff0000",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "pages/images/wode.png",
+        "text": "我的",
+        "selectedIconPath":"pages/images/wode1.png"
+      },
+      {
+        "pagePath": "pages/discovery/discovery",
+        "iconPath": "pages/images/discovery.png",
+        "text": "发现",
+        "selectedIconPath": "pages/images/discovery1.png"
+      },
+      {
+        "pagePath": "pages/musicIndex/musicIndex",
+        "iconPath": "pages/images/cloud.png",
+        "text": "云村",
+        "selectedIconPath": "pages/images/cloud1.png"
+      },
+      {
+        "pagePath": "pages/shipin/shipin",
+        "iconPath": "pages/images/shipin.png",
+        "text": "视频",
+        "selectedIconPath": "pages/images/shipin1.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
 }

@@ -10,4 +10,18 @@
   <view class="usermotto" catchtap='goMusicIndex'>
     <text class="user-motto">{{motto}}</text>
   </view>
+  <view class="threeLine" catchtap="aboutMe">
+    <image src="../images/tline.png"></image>
+  </view>
+  <!-- 左侧弹出层 -->
+  <van-popup
+  show="{{ show }}"
+  type="{{position}}"
+  overlay="{{ true }}"
+  bind:close="onClose"
+>
+  <view style="background:#ffffff;width:700rpx;height:800rpx;">
+    <text>我的介绍</text>
+  </view>
+</van-popup>
 </view>

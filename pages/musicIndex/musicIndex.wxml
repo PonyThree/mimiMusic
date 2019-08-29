@@ -1,6 +1,6 @@
 <!--pages/musicIndex/musicIndex.wxml-->
 <view class="page musicIndex">
-    <view style="height:100rpx;"></view>
+    <view style="height:120rpx;"></view>
     <!-- 搜索栏 -->
     <view class="searchBar">
       <text>{{indexTitle}}</text>
@@ -34,12 +34,49 @@
         <view class="grid">
           <!-- 图标 -->
           <view class="gLogo">
-            <image src=""></image>
+            <image src="../images/tj.png"></image>
           </view>
           <text>每日推荐</text>
         </view>
-      
+        <view class="grid">
+          <!-- 图标 -->
+          <view class="gLogo">
+            <image src="../images/gedan.png"></image>
+          </view>
+          <text>歌单</text>
+        </view>
+        <view class="grid">
+          <!-- 图标 -->
+          <view class="gLogo">
+            <image src="../images/ranking.png"></image>
+          </view>
+          <text>排行榜</text>
+        </view>
+        <view class="grid">
+          <!-- 图标 -->
+          <view class="gLogo">
+            <image src="../images/diantai.png"></image>
+          </view>
+          <text>电台</text>
+        </view>
+        <view class="grid">
+          <!-- 图标 -->
+          <view class="gLogo">
+            <image src="../images/zhibo.png"></image>
+          </view>
+          <text>直播</text>
+        </view>
+        <view class="grid">
+          <!-- 图标 -->
+          <view class="gLogo">
+            <image src="../images/geshou.png"></image>
+          </view>
+          <text>歌手</text>
+        </view>
       </scroll-view>
     </view>
-
+    <!-- 推荐歌单 -->
+    <view class="">
+    
+    </view>
 </view>

@@ -4,6 +4,8 @@ const app = getApp()
 
 Page({
   data: {
+    show:false,
+    position:'left',
     motto: 'Hello mimi音乐',
     userInfo: {},
     hasUserInfo: false,
@@ -14,7 +16,7 @@ Page({
   },
   onLoad: function () {
       wx.setNavigationBarTitle({
-          title: '用户登录加载...',
+          title: '用户登录',
       })
     if (app.globalData.userInfo) {
       this.setData({
@@ -59,9 +61,23 @@ Page({
         data: this.data.userInfo||'',
     })
   },
+  // 去云村首页
   goMusicIndex(){
-    wx.navigateTo({
-        url: '/pages/musicIndex/musicIndex?userInfo='+this.data.userInfo,
+    wx.switchTab({
+      url: '/pages/musicIndex/musicIndex?userInfo=' + this.data.userInfo,
+    })
+  },
+  //关于我弹窗层
+  aboutMe(){
+    console.log('打开弹出层')
+    this.setData({
+      show: true
+    })
+  },
+  //关闭弹窗
+  onClose(){
+    this.setData({
+      show:false
     })
   }
 })
