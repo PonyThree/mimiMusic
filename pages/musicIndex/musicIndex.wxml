@@ -33,42 +33,42 @@
       <scroll-view scroll-x class="scrollBox">
         <view class="grid">
           <!-- 图标 -->
-          <view class="gLogo">
+          <view class="gLogo fblue">
             <image src="../images/tj.png"></image>
           </view>
           <text>每日推荐</text>
         </view>
         <view class="grid">
           <!-- 图标 -->
-          <view class="gLogo">
+          <view class="gLogo fblue">
             <image src="../images/gedan.png"></image>
           </view>
           <text>歌单</text>
         </view>
         <view class="grid">
           <!-- 图标 -->
-          <view class="gLogo">
+          <view class="gLogo fblue">
             <image src="../images/ranking.png"></image>
           </view>
           <text>排行榜</text>
         </view>
         <view class="grid">
           <!-- 图标 -->
-          <view class="gLogo">
+          <view class="gLogo fblue">
             <image src="../images/diantai.png"></image>
           </view>
           <text>电台</text>
         </view>
         <view class="grid">
           <!-- 图标 -->
-          <view class="gLogo">
+          <view class="gLogo fblue">
             <image src="../images/zhibo.png"></image>
           </view>
           <text>直播</text>
         </view>
         <view class="grid">
           <!-- 图标 -->
-          <view class="gLogo">
+          <view class="gLogo fblue">
             <image src="../images/geshou.png"></image>
           </view>
           <text>歌手</text>
@@ -76,7 +76,45 @@
       </scroll-view>
     </view>
     <!-- 推荐歌单 -->
-    <view class="">
-    
+    <view class="songList">
+      <view class="title">
+        <text>推荐歌单</text>
+        <text catchtap="refreshData">刷新数据</text>
+        <text catchtap="songList" class="fblue">歌单广场</text>
+      </view>
+      <view class="list">
+        <view class="item" wx:for="{{recommend}}" wx:key="{{item.id}}">
+          <view>
+            <image src="{{item.picUrl}}" mode="widthFix"></image>
+            <!-- <image src="../images/defaultPic.png" mode="widthFix"></image> -->
+          </view>
+          <view class="f20">
+            <text>{{item.name}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+    <!-- 新歌新碟 -->
+    <view class="songList">
+      <view class="newSontitle">
+          <text catch="changeContent" class="{{type==1?'active':'inactive'}}" catchtap="changestatus" data-type="1">新碟</text>
+          <text catch="changeContent" class="{{type==2?'active':'inactive'}}" catchtap="changestatus" data-type="2">新歌</text>
+          <view>
+            <text wx:if="{{type==1}}" class="fblue">更多新碟</text>
+            <text wx:if="{{type==2}}" class="fblue">新歌推荐</text>
+          </view>
+      </view>
+      <view class="list">
+        <view class="item" wx:for="{{newSong}}" wx:key="{{item.id}}">
+            <view>
+              <image src="{{item.picUrl}}" mode="widthFix" wx:if="{{item.picUrl}}"></image>
+              <image src="../images/defaultPic.png" mode="widthFix" wx:if="{{!item.picUrl}}"></image>
+            </view>
+            <view class="f20 tcenter">
+                <text>{{item.name}}</text>
+            </view>
+        </view>
+      </view>
+
     </view>
 </view>

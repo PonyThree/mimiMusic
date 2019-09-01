@@ -5,7 +5,8 @@
     "pages/search/search",
     "pages/identifySong/identifySong",
     "pages/discovery/discovery",
-    "pages/shipin/shipin"
+    "pages/shipin/shipin",
+    "pages/songList/songList"
   ],
   "window": {
     "backgroundTextStyle": "dark",
@@ -24,13 +25,13 @@
         "selectedIconPath":"pages/images/wode1.png"
       },
       {
-        "pagePath": "pages/discovery/discovery",
+        "pagePath": "pages/musicIndex/musicIndex",
         "iconPath": "pages/images/discovery.png",
         "text": "发现",
         "selectedIconPath": "pages/images/discovery1.png"
       },
       {
-        "pagePath": "pages/musicIndex/musicIndex",
+        "pagePath": "pages/discovery/discovery",
         "iconPath": "pages/images/cloud.png",
         "text": "云村",
         "selectedIconPath": "pages/images/cloud1.png"

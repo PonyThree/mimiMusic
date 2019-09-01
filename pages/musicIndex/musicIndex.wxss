@@ -39,8 +39,8 @@
 /* banner */
 .mBanner{
     position: relative;
-    width: 94%;
-    margin:0 auto;
+    width: 90%;
+    margin:20rpx auto 0;
     border-radius: 20rpx;
     overflow: hidden;
     background-color: #ffffff;
@@ -54,9 +54,10 @@
 /* banner标志 */
 .mark{
     position: absolute;
-    width: 156rpx;
-    height: 60rpx;
-    line-height: 60rpx;
+    /* width: 156rpx; */
+    padding:15rpx 30rpx;
+    height: 20rpx;
+    line-height: 20rpx;
     font-size: 24rpx;
     color: #ffffff;
     border-radius: 20rpx 0;
@@ -91,7 +92,7 @@
   position: relative;
   width: 60rpx;
   height:60rpx;
-  background-color: #aaaaff;
+  /* background-color: #aaaaff; */
   border-radius:50%;
   margin: 10rpx auto 0;
   /* z-index: -1; */
@@ -109,4 +110,112 @@
 }
 .grid >text{
   font-size: 20rpx;
+}
+/* 推荐歌单 */
+.songList{
+  width: 90%;
+  margin:0 auto;
+}
+.songList .title{
+  display: flex;
+  justify-content: space-between;
+  margin-top:30rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+}
+.title >text:nth-child(1){
+  font-size: 36rpx;
+  font-weight: 600;
+  color: #000000;
+}
+.title >text:nth-child(3){
+  width: 130rpx;
+  font-size: 20rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  text-align: center;
+  border:1px solid #eeeeee;
+  color: #333333;
+  border-radius:25rpx;
+  
+}
+.title >text:nth-child(2){
+  width: 130rpx;
+  font-size: 20rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  margin-left: 200rpx;
+  text-align: center;
+  border:1px solid #eeeeee;
+  color: #333333;
+  background-color: #f2f2f2;
+  border-radius:25rpx;
+}
+/* 推荐歌单列表 */
+.list{
+  width: 100%;
+  height: auto;
+  white-space: wrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  margin-bottom: 40rpx;
+}
+.list .item{
+  display: inline-block;
+  width:29%;
+  height: 260rpx;
+  overflow: hidden;
+  margin:20rpx 13rpx 0;
+  white-space: wrap;
+  text-overflow: ellipsis;
+  padding-bottom: 6rpx;
+  /* border: 1px solid #dddddd;   */
+}
+.list .item view:nth-child(1){
+  width: 100%;
+  height:180rpx;
+  overflow: hidden;
+  border-radius:10rpx;
+}
+.list .item view:nth-child(1)>image{
+  width: 100%;
+  height:180rpx;
+}
+.item view:nth-child(2) >text{
+  text-align: center;
+}
+/* 新歌新碟 */
+.newSontitle{
+  width: 100%;
+  height: 50rpx;
+  line-height: 50rpx;
+  margin: 0 auto;
+}
+.newSontitle >text{
+  padding: 0 8rpx;
+}
+.newSontitle >text.active{
+  color: #000000;
+  font-weight: bold;
+  font-size: 36rpx;
+}
+.newSontitle >text.inactive{
+  font-size: 24rpx;
+  color: #333333;
+}
+.newSontitle >text:nth-child(2){
+  margin-left: 60rpx;
+}
+.newSontitle >view{
+  float: right;
+  height: 50rpx;
+}
+.newSontitle >view >text{
+  display:inline-block;
+  width: 130rpx;
+  font-size: 20rpx;
+  text-align: center;
+  border:1px solid #eeeeee;
+  color: #333333;
+  border-radius:25rpx;
 }

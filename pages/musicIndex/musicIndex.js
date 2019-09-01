@@ -6,22 +6,33 @@ Page({
    * 页面的初始数据
    */
   data: {
+    defaultPic:'../images/defaultPic.png',
     indexTitle: '咪乐馆',
     myHeight: '',
     myWidth: '',
     indicatorDots: true,
     autoplay: true,
     interval: 2000,
+    offset:0,
+    limit:6,
+    //1新碟 2新歌
+    type:1,
     //banner
     banners: [],
+    //推荐
+    recommend:[],
+    //新碟新歌
+    newSong:[]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
-    console.log(app.globalData.userInfo)
+    // console.log(app.globalData.userInfo)
     this.renderBanners()
+    this.recommend(this.data.limit);
+    this.renderNewSong(this.data.type);
   },
 
   /**
@@ -77,12 +88,67 @@ Page({
     wx.request({
       url: app.url + '/banner?type=2',
       success: res => {
-        console.log(res.data)
         this.setData({
           banners: res.data.banners
         })
       }
     })
+  },
+  // 推荐歌单数据
+  recommend(limit){
+    wx.request({
+      url: app.url +`/personalized?offset=${this.data.offset}&limit=${limit}`,
+      success:res=>{
+        var len = res.data.result.length;
+        // console.log(len)
+        if(len/6>1){
+          var newList=res.data.result.splice(len-6,len);
+          this.setData({
+            recommend: newList
+          })
+        }else{
+          this.setData({
+            recommend: res.data.result
+          })
+        }
+      }
+    })
+  },
+  // 新碟新歌数据
+  renderNewSong(type){
+    //新碟
+    if(type==1){
+      wx.request({
+        url: app.url + '/top/album?limit=3',
+        success: res => {
+          // console.log(res.data.albums)
+          this.setData({
+            newSong: res.data.albums
+          })
+        }
+      })
+    }
+    //新歌
+    if(type==2){
+      wx.request({
+        url: app.url +'/personalized/newsong?limit=3',
+        success:res=>{
+          console.log(res.data.result)
+          var len1=res.data.result.length;
+          var newSong=res.data.result.splice(len1-3,len1);
+          console.log(newSong)
+          this.setData({
+            newSong
+          })
+        }
+      })
+    }
+   
+  },
+  //加载下一页数据
+  refreshData() {
+    this.data.limit+=6;
+    this.recommend( this.data.limit)
   },
   //处理图片高度
   imgheight(e) {
@@ -116,5 +182,21 @@ Page({
     wx.navigateTo({
       url: '/pages/identifySong/identifySong',
     })
+  },
+  // 去歌单广场
+  songList(){
+    wx.navigateTo({
+      url: '/pages/songList/songList',
+    })
+  },
+  //新歌 新碟切换
+  changestatus(e){
+    // console.log(e.currentTarget)
+    var type = e.currentTarget.dataset.type;
+    this.setData({
+      type:type
+    })
+    this.renderNewSong(this.data.type)
+ console.log(this.data.type)
   }
 })

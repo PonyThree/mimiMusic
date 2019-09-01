@@ -11,3 +11,17 @@
 .page{
   background-color: #f8f8f8;
 }
+.fblue{
+  background-color: #aaaaff;
+}
+.f20{
+  font-size: 20rpx;
+  line-height: 30rpx;
+}
+.tcenter{
+  text-align: center!important;
+}
+.b0{
+  border: 1px solid #dddddd;
+}
+
