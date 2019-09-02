@@ -80,6 +80,12 @@
   overflow: hidden;
   white-space: nowrap;
 }
+/* 去除横向滚动条 */
+::-webkit-scrollbar {
+ width: 0;
+ height: 0;
+ color: transparent;
+}
 .grid{
   display: inline-block;
   width: 18%;
