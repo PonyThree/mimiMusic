@@ -1,0 +1,11 @@
+/* pages/searchResults/searchResults.wxss */
+/* 搜索 */
+page{
+    font-size: 32rpx;
+}
+.mystyle{
+    display: felx;
+    justify-content: space-between;
+    width: 96%;
+    margin:0 auto;
+}

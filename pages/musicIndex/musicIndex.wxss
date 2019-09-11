@@ -27,19 +27,19 @@
   width: 300rpx;
   height: 60rpx;
   border-radius: 30rpx;
-  padding-left: 30rpx;
+  /* padding-left: 30rpx; */
   background-color: #ffffff;
 }
 .search text{
   font-size: 24rpx;
   line-height: 60rpx;
   color: #dddddd;
-  margin-left:30rpx;
+  /* margin-left:30rpx; */
 }
 /* banner */
 .mBanner{
     position: relative;
-    width: 90%;
+    width: 100%;
     margin:20rpx auto 0;
     border-radius: 20rpx;
     overflow: hidden;
@@ -119,7 +119,7 @@
 }
 /* 推荐歌单 */
 .songList{
-  width: 90%;
+  width: 100%;
   margin:0 auto;
 }
 .songList .title{
@@ -171,7 +171,7 @@
   width:29%;
   height: 260rpx;
   overflow: hidden;
-  margin:20rpx 13rpx 0;
+  margin:20rpx 15rpx 0;
   white-space: wrap;
   text-overflow: ellipsis;
   padding-bottom: 6rpx;

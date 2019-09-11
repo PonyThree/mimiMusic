@@ -1,1 +1,95 @@
 /* pages/search/search.wxss */
+/* 搜索 */
+.mystyle{
+    display: felx;
+    justify-content: space-between;
+    width: 96%;
+    margin:0 auto;
+}
+/* 历史记录 */
+.title{
+    width: 96%;
+    margin: 0 auto;
+    padding: 10rpx;
+    /* background-color: #afa; */
+}
+.top{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.top >text{
+    height: 60rpx;
+    font-weight: bold;
+    line-height: 60rpx;
+    font-size: 36rpx;
+}
+.top >image{
+    width: 36rpx;
+    height: 36rpx;
+    background-color: #f2f2f2;
+    padding: 10rpx;
+    border-radius: 50%;
+}
+.scrollBox{
+    width: 100%;
+    height: 80rpx;
+    overflow: hidden;
+    white-space: nowrap;
+    background-color: #f88;
+}
+.scrollBox >view{
+    display: inline-block;
+    /* padding:0 20rpx; */
+    height: 80rpx;
+    font-size: 30rpx;
+    border-radius: 40rpx;
+    background-color: red;
+}
+/* 热搜榜 */
+.hot{
+    margin-top: 60rpx;
+}
+.hotList .item{
+    display: flex;
+    padding-left: 40rpx;
+    /* justify-content: space-between; */
+    align-items: center;
+    width: 100%;
+    font-size: 30rpx;
+    margin-top: 30rpx;
+    /* background-color: #ff0; */
+}
+.hotList .item >view:nth-child(1){
+    margin-right: 40rpx;
+}
+.item >view:nth-child(1) text.red{
+       font-size: 30rpx;
+       color: red;
+}
+.desc >view:nth-child(1) text:nth-child(1){
+       font-size: 30rpx;
+       color: #000000;
+}
+.desc >view:nth-child(1) text.hotBlack{
+    font-weight: bold;
+}
+.desc >view:nth-child(1) text:nth-child(2){
+       font-size: 24rpx;
+       color: #cccccc;
+       margin:0 20rpx;
+}
+.desc >view:nth-child(1) image{
+    width: 50rpx;
+    height: 30rpx;
+}
+.desc >view:nth-child(2){
+    margin-top: 6rpx;
+}
+.desc >view:nth-child(2) text{
+    font-size: 24rpx;
+    color: #999999;
+}
+
+

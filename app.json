@@ -6,7 +6,8 @@
     "pages/identifySong/identifySong",
     "pages/discovery/discovery",
     "pages/shipin/shipin",
-    "pages/songList/songList"
+    "pages/songList/songList",
+    "pages/searchResults/searchResults"
   ],
   "window": {
     "backgroundTextStyle": "dark",

@@ -1,2 +1,39 @@
 <!--pages/search/search.wxml-->
-<text>搜索页面</text>
+<view>
+    <van-search value="{{ searchValue }}" placeholder="请输入搜索关键词" show-action shape="round" clearable placeholder-style="font-size:20rpx;color:#dddddd;" input-align="center" custom-class="mystyle" ></van-search>
+    <!-- 历史记录 -->
+    <view class="title">
+        <view class="top">
+            <text>历史记录</text>
+            <image src="../images/delete.png" style="width:36rpx;height:36rpx;"></image>
+        </view>
+        <!-- <view class="records">
+            <scroll-view scroll-x class="scrollBox">
+                <view wx:for="{{6}}">1111</view>
+            </scroll-view>
+        </view> -->
+    </view>
+    <!-- 热搜榜 -->
+    <view class="title hot">
+        <view class="top">
+            <text>热搜榜</text>
+        </view>
+        <view class="hotList">
+            <view class="item" wx:for="{{hotSearchList}}" wx:key="{{index}}" catchtap='goSearchResults' data-words="{{item.searchWord}}">
+                <view>
+                    <text class="{{index<3?'red':''}}">{{index+1}}</text>   
+                </view>
+                <view class="desc">
+                    <view>
+                        <text class="{{index<3?'hotBlack':''}}">{{item.searchWord}}</text>
+                        <text>{{item.score}}</text>
+                        <image src="{{item.iconUrl}}" wx:if="{{item.iconUrl}}"></image>
+                    </view>
+                    <view>
+                        <text>{{item.content}}</text>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

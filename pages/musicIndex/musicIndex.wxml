@@ -1,5 +1,5 @@
 <!--pages/musicIndex/musicIndex.wxml-->
-<view class="page musicIndex">
+<view class="page musicIndex container">
     <view style="height:120rpx;"></view>
     <!-- 搜索栏 -->
     <view class="searchBar">

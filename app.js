@@ -34,7 +34,9 @@ App({
         })
     },
     globalData: {
-        userInfo: null
+        userInfo: null,
+        // 搜索记录
+        searchRecords:[]
     },
   url: "http://120.79.14.212:3000",
 })
