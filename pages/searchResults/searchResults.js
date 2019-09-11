@@ -6,7 +6,7 @@ Page({
      */
     data: {
         searchValue:'',
-        active:1
+        active:0
     },
 
     /**
@@ -65,6 +65,10 @@ Page({
      * 用户点击右上角分享
      */
     onShareAppMessage: function () {
+
+    },
+    // tab切换
+    onChange(e){
 
     }
 })
