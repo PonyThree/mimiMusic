@@ -2,16 +2,16 @@
 <view>
     <van-search value="{{ searchValue }}" placeholder="请输入搜索关键词" show-action shape="round" clearable placeholder-style="font-size:20rpx;color:#dddddd;" input-align="center" custom-class="mystyle" ></van-search>
     <!-- 历史记录 -->
-    <view class="title">
+    <view class="title" >
         <view class="top">
             <text>历史记录</text>
-            <image src="../images/delete.png" style="width:36rpx;height:36rpx;"></image>
+            <image src="../images/delete.png" style="width:36rpx;height:36rpx;" catchtap='delRecords'></image>
         </view>
-        <!-- <view class="records">
+        <view class="records" wx:if="{{historyRecords.length>0}}">
             <scroll-view scroll-x class="scrollBox">
-                <view wx:for="{{6}}">1111</view>
+                <view wx:for="{{historyRecords}}" wx:key="{{item}}">{{item}}</view>
             </scroll-view>
-        </view> -->
+        </view>
     </view>
     <!-- 热搜榜 -->
     <view class="title hot">

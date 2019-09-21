@@ -1,4 +1,5 @@
 // pages/searchResults/searchResults.js
+const app=getApp();
 Page({
 
     /**
@@ -17,6 +18,7 @@ Page({
         this.setData({
             searchValue: e.words||'暂无搜索'
         })
+        this.renderData(e.words)
     },
 
     /**
@@ -70,5 +72,14 @@ Page({
     // tab切换
     onChange(e){
 
+    },
+    // 默认为 1 即单曲, 取值意义: 1: 单曲, 10: 专辑, 100: 歌手, 1000: 歌单, 1002: 用户, 1004: MV, 1006: 歌词, 1009: 电台, 1014: 视频, 1018: 综合
+    renderData(type = 1,words){
+        wx.request({
+            url: app.url + "/search?keywords=" + words +" & type"+type,
+            success:res=>{
+                console.log(res.data.result)
+            }
+        })
     }
 })

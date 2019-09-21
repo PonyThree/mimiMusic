@@ -83,7 +83,7 @@
         <text catchtap="songList" class="fblue">歌单广场</text>
       </view>
       <view class="list">
-        <view class="item" wx:for="{{recommend}}" wx:key="{{item.id}}">
+        <view class="item" wx:for="{{recommend}}" wx:key="{{item.id}}" wx:if="{{index<6}}">
           <view>
             <image src="{{item.picUrl}}" mode="widthFix"></image>
             <!-- <image src="../images/defaultPic.png" mode="widthFix"></image> -->
@@ -105,7 +105,7 @@
           </view>
       </view>
       <view class="list">
-        <view class="item" wx:for="{{newSong}}" wx:key="{{item.id}}">
+        <view class="item" wx:for="{{newSong}}" wx:key="{{item.id}}" wx:if="{{index<3}}">
             <view>
               <image src="{{item.picUrl}}" mode="widthFix" wx:if="{{item.picUrl}}"></image>
               <image src="../images/defaultPic.png" mode="widthFix" wx:if="{{!item.picUrl}}"></image>

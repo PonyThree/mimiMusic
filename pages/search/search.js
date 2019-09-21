@@ -1,4 +1,5 @@
 // pages/search/search.js
+var arr = [];
 const app = getApp();
 Page({
 
@@ -10,6 +11,8 @@ Page({
         hotSearchList: [],
         //   搜索关键字
         searchValue: '',
+        // 历史记录
+        historyRecords:[],
     },
 
     /**
@@ -94,10 +97,23 @@ Page({
         this.setData({
             searchValue: words
         })
+        arr.push(words)
+        arr=Array.from(new Set(arr))
+        console.log(arr)
+        this.setData({
+            historyRecords: arr
+        })
         setTimeout(()=>{
             wx.navigateTo({
                 url: '/pages/searchResults/searchResults?words=' + words,
             })
+        })
+    },
+    // 清空历史记录
+    delRecords(){
+        arr=[]
+        this.setData({
+            historyRecords: arr
         })
     }
 })
