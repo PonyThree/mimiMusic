@@ -14,11 +14,11 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad: function (e) {
-        console.log(e.words)
+        console.log(e)
         this.setData({
             searchValue: e.words||'暂无搜索'
         })
-        this.renderData(e.words)
+        this.renderData(1,e.words)
     },
 
     /**
@@ -76,7 +76,7 @@ Page({
     // 默认为 1 即单曲, 取值意义: 1: 单曲, 10: 专辑, 100: 歌手, 1000: 歌单, 1002: 用户, 1004: MV, 1006: 歌词, 1009: 电台, 1014: 视频, 1018: 综合
     renderData(type = 1,words){
         wx.request({
-            url: app.url + "/search?keywords=" + words +" & type"+type,
+            url: app.url + "/search?keywords=" + words +" & type="+type,
             success:res=>{
                 console.log(res.data.result)
             }

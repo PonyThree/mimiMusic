@@ -12,7 +12,9 @@ Page({
         //   搜索关键字
         searchValue: '',
         // 历史记录
-        historyRecords:[],
+        historyRecords:[
+          '芒种'
+        ],
     },
 
     /**
@@ -20,7 +22,7 @@ Page({
      */
     onLoad: function(options) {
         console.log(app.globalData.searchRecords);
-        this.getHotSearchList();
+        
     },
 
     /**
@@ -34,7 +36,7 @@ Page({
      * 生命周期函数--监听页面显示
      */
     onShow: function() {
-
+      this.getHotSearchList();
     },
 
     /**

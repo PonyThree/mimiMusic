@@ -48,6 +48,16 @@
     border-radius: 40rpx;
     background-color: red;
 }
+.scrollBox view.item{
+    display: inline-block;
+    background-color: #f8f8f8;
+    padding:0 20rpx;
+    height: 40rpx;
+    line-height: 40rpx;
+    margin: 10rpx;
+    font-size: 22rpx;
+    border-radius: 40rpx;
+}
 /* 热搜榜 */
 .hot{
     margin-top: 60rpx;

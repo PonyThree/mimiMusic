@@ -8,8 +8,13 @@
             <image src="../images/delete.png" style="width:36rpx;height:36rpx;" catchtap='delRecords'></image>
         </view>
         <view class="records" wx:if="{{historyRecords.length>0}}">
-            <scroll-view scroll-x class="scrollBox">
+            <!-- <scroll-view scroll-x class="scrollBox">
                 <view wx:for="{{historyRecords}}" wx:key="{{item}}">{{item}}</view>
+            </scroll-view> -->
+             <scroll-view scroll-x class="scrollBox">       
+              <view wx:for="{{historyRecords}}" wx:key="{{index}}" class="item">
+                <text>{{item}}</text>
+              </view>
             </scroll-view>
         </view>
     </view>
