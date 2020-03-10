@@ -1,13 +1,16 @@
 <!--pages/searchResults/searchResults.wxml-->
 <view>
-     <van-search value="{{ searchValue }}" placeholder="请输入搜索关键词" show-action shape="round" clearable placeholder-style="font-size:20rpx;color:#dddddd;" input-align="center" custom-class="mystyle" ></van-search>
-    <van-tabs active="{{ active }}" bind:change="onChange">
-        <van-tab title="综合">内容 1</van-tab>
+    <van-search value="{{ searchValue }}" placeholder="请输入搜索关键词" show-action shape="round" clearable placeholder-style="font-size:20rpx;color:#dddddd;" input-align="center" custom-class="mystyle" bind:change="searchChange"></van-search>
+    <van-tabs active="{{ active }}" bind:search="onChange">
+        <!-- <van-tab title="综合">内容 1</van-tab>
         <van-tab title="单曲">内容 2</van-tab>
         <van-tab title="视频">内容 3</van-tab>
         <van-tab title="歌手">内容 4</van-tab>
         <van-tab title="专辑">内容 5</van-tab>
         <van-tab title="歌单">内容 6</van-tab>
-        <van-tab title="电台">内容 7</van-tab>
+        <van-tab title="电台">内容 7</van-tab> -->
+        <van-tab wx:for="{{titleList}}" title="{{item.title}}" wx:key="{{item.id}}">
+            内容{{index+1}}
+        </van-tab>
     </van-tabs>
 </view>
